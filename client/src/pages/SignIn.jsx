@@ -46,7 +46,6 @@ const SignIn = () => {
       }
       console.log(data)
       dispatch(signInSuccess(data.rest))
-      Cookies.set('Token', data.token, { path: '/', secure: true, sameSite: 'None' });
       navigate('/')
     } catch (error) {
       dispatch(signInfailure(error.rest.message))

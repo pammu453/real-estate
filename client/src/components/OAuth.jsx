@@ -32,7 +32,6 @@ const OAuth = () => {
             const data = await res.json()
 
             dispatch(signInSuccess(data.rest))
-            Cookies.set('Token', data.token, { path: '/', secure: true, sameSite: 'None' });
             navigate("/")
         } catch (error) {
             console.log('could not sign in with google', error)
