@@ -8,7 +8,6 @@ import { signInSuccess } from '../redux/userSlice'
 import { useNavigate } from 'react-router-dom'
 import BASE_URL from '../apiConfig'
 
-import Cookies from 'js-cookie'
 
 const OAuth = () => {
 
@@ -31,7 +30,7 @@ const OAuth = () => {
             })
             const data = await res.json()
 
-            dispatch(signInSuccess(data.rest))
+            dispatch(signInSuccess(data))
             navigate("/")
         } catch (error) {
             console.log('could not sign in with google', error)
