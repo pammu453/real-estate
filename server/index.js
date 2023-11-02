@@ -14,7 +14,7 @@ const app = express()
 
 
 const corsOptions = {
-    origin: 'http://localhost:5173', 
+    origin: 'https://6543c618e3ecb306c43ee60d--grand-paprenjak-785d73.netlify.app', 
     credentials: true
 };
 
