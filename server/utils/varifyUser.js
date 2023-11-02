@@ -2,10 +2,7 @@ import jwt from "jsonwebtoken"
 import { errorHandler } from "./error.js"
 
 export const varifyToken = (req, res, next) => {
-    const cookies = req.headers.cookie || '';
-    console.log('COOK'+cookies)
-    const tokenCookie = cookies.split(';').find(cookie => cookie.trim().startsWith('Token='));
-    const token = tokenCookie ? tokenCookie.split('=')[1] : null;
+    const token = req.cookies.token;
     
     if (!token) {
         console.log("Token"+token)
