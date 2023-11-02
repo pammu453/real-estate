@@ -1,0 +1,15 @@
+[build]
+  command = "CI='' npm run build"
+  publish = "/build"
+  base ="/"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+for = "/*"
+  [headers.values]
+  Access-Control-Allow-Origin = "*"
+  Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
