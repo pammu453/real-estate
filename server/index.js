@@ -14,7 +14,7 @@ const app = express()
 
 
 const corsOptions = {
-    origin: 'https://6543d22bc8cb3a1a70d7ba20--creative-marzipan-877f71.netlify.app', 
+    origin: 'https://app.netlify.com/sites/serene-malasada-5da25d/deploys/6544d36a3a4ed41271222f40', 
     credentials: true
 };
 
